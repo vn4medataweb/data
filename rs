@@ -109,7 +109,7 @@ if MyAccount then
     return Meleecount;
   end
   while wait() do
-    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..checkgod())
-    wait(60)
+    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkgod()..checkcdk()..checkttk()..guong()..checksoulguitar())
+    wait(120)
   end
 end
