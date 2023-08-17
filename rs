@@ -91,14 +91,9 @@ if MyAccount then
   function guong()
     toreturn = ""
     if CheckItem("Mirror Fractal") == true then
-      toreturn = "-MF"
-    end
-    return toreturn;
-  end
-  function mu()
-    toreturn = ""
     if CheckItem("Valkyrie Helm") == true then
-      toreturn = "-HE"
+      toreturn = "-MM"
+    end
     end
     return toreturn;
   end
@@ -114,7 +109,7 @@ if MyAccount then
     return Meleecount;
   end
   while wait() do
-    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..mu()..checkgod())
+    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..checkgod())
     wait(60)
   end
 end
