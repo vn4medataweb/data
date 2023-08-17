@@ -60,6 +60,13 @@ if MyAccount then
     end
     return have;
   end
+  function checkgod()
+    toreturn = ""
+    if CheckItem("Godhuman") == true then
+      toreturn = "-GOD"
+    end
+    return toreturn;
+  end
   function checkcdk()
     toreturn = ""
     if CheckItem("Cursed Dual Katana") == true then
@@ -107,7 +114,7 @@ if MyAccount then
     return Meleecount;
   end
   while wait() do
-    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..mu())
+    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..mu()..checkgod())
     wait(60)
   end
 end
