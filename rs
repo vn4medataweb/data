@@ -81,8 +81,22 @@ if MyAccount then
     end
     return toreturn;
   end
+  function guong()
+    toreturn = ""
+    if CheckItem("Mirror Fractal") == true then
+      toreturn = "-MF"
+    end
+    return toreturn;
+  end
+  function mu()
+    toreturn = ""
+    if CheckItem("Valkyrie Helm") == true then
+      toreturn = "-HE"
+    end
+    return toreturn;
+  end
   function checkmeleecount()
-    local MeleeTable = {"Superhuman","ElectricClaw","DragonTalon","SharkmanKarate","DeathStep","Godhuman"}
+    local MeleeTable = {"Superhuman","ElectricClaw","DragonTalon","SharkmanKarate","DeathStep","Godhuman","Dough"}
     Meleecount = 0
     for i,v in pairs(MeleeTable) do
       if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then
@@ -93,7 +107,7 @@ if MyAccount then
     return Meleecount;
   end
   while wait() do
-    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar())
+    MyAccount:SetAlias(game.Players.LocalPlayer.Data.Level.Value.."-"..checkmeleecount()..checkcdk()..checkttk()..checksoulguitar()..guong()..mu())
     wait(60)
   end
 end
