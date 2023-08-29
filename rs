@@ -84,7 +84,7 @@ if MyAccount then
   function checksoulguitar()
     toreturn = ""
     if CheckItem("Soul Guitar") == true then
-      toreturn = "-SG"
+      toreturn = "-SGT"
     end
     return toreturn;
   end
